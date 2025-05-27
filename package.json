@@ -1,0 +1,17 @@
+{
+  "name": "cypress_login_captcha_mfa",
+  "version": "1.0.0",
+  "description": "Cypress tests with SonarQube report generation",
+  "scripts": {
+    "generate-report": "ts-node reports/sonar/sonarqube-report.ts"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "playwright": "^1.40.0",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.2"
+  }
+}
