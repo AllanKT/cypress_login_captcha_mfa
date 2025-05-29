@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { snykConfig } from '../config/snyk.config';
+import { snykConfig } from '../config/services.config';
 
 interface SnykVulnerability {
     id: string;
@@ -41,9 +41,6 @@ interface SnykVulnerability {
 }
 
 interface SnykProjectIssues {
-    // issues: {
-    //     vulnerabilities: SnykVulnerability[];
-    // };
     issues: SnykVulnerability[]
 }
 
@@ -80,7 +77,7 @@ export interface SnykMetrics {
 }
 
 export class SnykService {
-    private readonly baseUrl = 'https://api.snyk.io/v1';
+    private readonly baseUrl = snykConfig.baseurl;
     private readonly headers: Record<string, string>;
 
     constructor() {

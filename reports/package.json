@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Generate PDF reports from SonarQube data using Playwright",
   "scripts": {
-    "generate-report": "ts-node sonar/sonarqube-report.ts"
+    "generate-report": "ts-node code/index.ts"
   },
   "dependencies": {
     "node-fetch": "^2.7.0",
